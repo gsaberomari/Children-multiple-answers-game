@@ -1,0 +1,520 @@
+{
+  "Arabic": [
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "شمال",
+      "options": [
+        "جنوب",
+        "شمال",
+        "شرق"
+      ],
+      "image": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWljNjdwNXFqeW1zMzJ3dW9pdTJ2Y3RkcXp2NncyZjF0djdvdXl1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/XAxJJFihRVjRxr529J/giphy.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "فراولة",
+      "options": [
+        "موز",
+        "فراولة",
+        "خيار"
+      ],
+      "image": "https://images.squarespace-cdn.com/content/v1/5b72117a55b02c64155d6f34/1593048849334-FH53710RQVKBOTQ0ULM0/Strawberry.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "باب",
+      "options": [
+        "مكتب",
+        "لوح",
+        "باب"
+      ],
+      "image": "https://res.cloudinary.com/dflbd2qdv/image/upload/v1710504755/output-onlinegiftools_tmweys.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "تفاحه",
+      "options": [
+        "موز",
+        "تفاحه",
+        "خيار"
+      ],
+      "image": "https://i.pinimg.com/originals/bc/ee/06/bcee066611b7943072de7eb3569759d0.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "بيت",
+      "options": [
+        "تلفاز",
+        "بيت",
+        "سياره"
+      ],
+      "image": "https://i.pinimg.com/originals/d3/18/13/d3181322e4522cf897fa8c1a038c6a2d.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "شمس",
+      "options": [
+        "شمس",
+        "ابن",
+        "قمر"
+      ],
+      "image": "https://i.pinimg.com/originals/f6/99/45/f6994503c6a4011c2c5149e54f3374a6.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "موز",
+      "options": [
+        "موز",
+        "تفاحه",
+        "خيار"
+      ],
+      "image": "https://res.cloudinary.com/dflbd2qdv/image/upload/v1710505556/banana_db9lcf.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "سمكة",
+      "options": [
+        "سمكة",
+        "تمساح",
+        "سلحفاة"
+      ],
+      "image": "https://i.pinimg.com/originals/50/9e/51/509e519884ea29d99bcd4ba6660c8865.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "كرة",
+      "options": [
+        "جرس",
+        "كرة",
+        "ملعب"
+      ],
+      "image": "https://i.pinimg.com/originals/1f/b5/42/1fb5428f43edb15624584f72ae905b62.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "شجرة",
+      "options": [
+        "شجرة",
+        "ربيع",
+        "غابة"
+      ],
+      "image": "https://i.pinimg.com/originals/92/3a/21/923a2151ce624bd50199a6d77d418802.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "قمر",
+      "options": [
+        "سماء",
+        "شمس",
+        "قمر"
+      ],
+      "image": "https://usagif.com/wp-content/uploads/gifs/moon-70.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "كتاب",
+      "options": [
+        "مدرسة",
+        "كتاب",
+        "طاولة"
+      ],
+      "image": "https://i.pinimg.com/originals/b4/3d/43/b43d438638e2ed51d1f19dad2a4eb24d.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "قطة",
+      "options": [
+        "ارنب",
+        "كلب",
+        "قطة"
+      ],
+      "image": "https://gifdb.com/images/high/swinging-cartoon-cat-3yxcbdsbj0eecq25.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "كلب",
+      "options": [
+        "قطة",
+        "كلب",
+        "حصان"
+      ],
+      "image": "https://i.pinimg.com/originals/70/98/9e/70989ecb0258f566b9af13e876cf7dce.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "كيك",
+      "options": [
+        "مطعم",
+        "خبز",
+        "كيك"
+      ],
+      "image": "https://i.pinimg.com/originals/e2/68/bd/e268bd4e17aa8faae79dba987017e443.gif"
+    },
+    {
+      "question": "ماذا تمثل الصورة؟",
+      "correctAnswer": "سيارة",
+      "options": [
+        "سيارة",
+        "طيارة",
+        "دارجة"
+      ],
+      "image": "https://cdn.dribbble.com/users/992933/screenshots/4608688/car_loop.gif"
+    },
+    {
+      "question": "اكمل الكلمة التالية \"حاسو\"؟",
+      "correctAnswer": "ب",
+      "options": [
+        "ف",
+        "ن",
+        "ب"
+      ],
+      "image": "https://www.shacktech.co.uk/wp-content/uploads/2021/04/Microsoft-Windows-is-still-king-Shackleton-Technologies-IT-Support-Dundee-Perth-Tayside-and-Fife.gif"
+    },
+    {
+      "question": "اكمل الكلمة التالية \"تمسا\"؟",
+      "correctAnswer": "ح",
+      "options": [
+        "ح",
+        "ن",
+        "م"
+      ],
+      "image": "https://i2.wp.com/www.uvtechnolab.com/wp-content/uploads/2019/12/Crocodile.gif"
+    },
+    {
+      "question": "اكمل الكلمة التالية \"برتقا\"؟",
+      "correctAnswer": "ل",
+      "options": [
+        "ل",
+        "خ",
+        "ن"
+      ],
+      "image": "https://i.pinimg.com/originals/19/a4/dc/19a4dc3aa566e0cdb11f436d6510d8a0.gif"
+    },
+    {
+      "question": "اكمل الكلمة التالية \"طيار\"؟",
+      "correctAnswer": "ة",
+      "options": [
+        "ي",
+        "ا",
+        "ة"
+      ],
+      "image": "https://i.pinimg.com/originals/cc/a5/02/cca5022c86f67861746d7cf2eb486de8.gif"
+    },
+    {
+      "question": "ما هو جمع الكلمة التالية \"قلم\"؟",
+      "correctAnswer": "اقلام",
+      "options": [
+        "قلوم",
+        "قلمان",
+        "اقلام"
+      ],
+      "image": "https://i.pinimg.com/originals/c6/56/c0/c656c0534725f42207971e269dd7e05d.gif"
+    },
+    {
+      "question": "ما هو جمع الكلمة التالية \"خريطة\"؟",
+      "correctAnswer": "خرائط",
+      "options": [
+        "خريطتان",
+        "خرائط",
+        "خريطات"
+      ],
+      "image": "https://img1.picmix.com/output/stamp/normal/0/7/6/1/2331670_c541c.gif"
+    },
+    {
+      "question": "ما هو جمع الكلمة التالية \"دب\"؟",
+      "correctAnswer": "دببه",
+      "options": [
+        "دببه",
+        "دبان",
+        "دبين"
+      ],
+      "image": "https://img1.picmix.com/output/stamp/normal/0/7/6/1/2331670_c541c.gif"
+    },
+    {
+      "question": "ما هو جمع الكلمة التالية \"ضوء\"؟",
+      "correctAnswer": "اضواء",
+      "options": [
+        "ضوءان",
+        "اضواء",
+        "ضواء"
+      ],
+      "image": "https://shreya.poetry.blog/wp-content/uploads/2020/02/gif2-1.gif?w=800"
+    }
+  ],
+  "Math": [
+    {
+      "question": "What is 2 + 2?",
+      "correctAnswer": "4",
+      "options": [
+        "3",
+        "4",
+        "5"
+      ],"image":"assets/arabic_images/cake.gif"
+    },
+    {
+      "question": "What is 5 * 3?",
+      "correctAnswer": "15",
+      "options": [
+        "12",
+        "15",
+        "18"
+      ],"image":"assets/arabic_images/book.gif"
+    },
+    {
+      "question": "What is 10 - 7?",
+      "correctAnswer": "3",
+      "options": [
+        "2",
+        "3",
+        "4"
+      ],"image":"assets/english_images/star.gif"
+    },
+    {
+      "question": "What is 10 - 5?",
+      "correctAnswer": "5",
+      "options": [
+        "2",
+        "5",
+        "4"
+      ],"image":"assets/arabic_images/cat.gif"
+    },
+    {
+      "question": "What is 2 + 7?",
+      "correctAnswer": "9",
+      "options": [
+        "9",
+        "8",
+        "4"
+      ],"image":"assets/english_images/duck.gif"
+    },
+    {
+      "question": "What is 10 + 2?",
+      "correctAnswer": "12",
+      "options": [
+        "12",
+        "10",
+        "4"
+      ],"image":"assets/english_images/car.gif"
+    },
+    {
+      "question": "What is 7 * 2?",
+      "correctAnswer": "14",
+      "options": [
+        "12",
+        "10",
+        "14"
+      ],"image":"assets/arabic_images/pencil.gif"
+    },
+    {
+      "question": "What is 10 * 2?",
+      "correctAnswer": "20",
+      "options": [
+        "20",
+        "10",
+        "40"
+      ],"image":"assets/arabic_images/tree.gif"
+    }
+  ],
+  "English": [
+    {
+      "question": "Complete the word \"Rai_\"?",
+      "correctAnswer": "n",
+      "options": [
+        "h",
+        "z",
+        "n"
+      ],
+      "image": "https://media.tenor.com/nBR0EXu7hmoAAAAi/kawanimals-rain.gif"
+    },
+    {
+      "question": "Complete the word \"Sno_\"?",
+      "correctAnswer": "w",
+      "options": [
+        "f",
+        "w",
+        "m"
+      ],
+      "image": "https://lenadesign.org/wp-content/uploads/2021/01/snowfall-shop-copy.gif"
+    },
+    {
+      "question": "Complete the word \"Ba_\"?",
+      "correctAnswer": "g",
+      "options": [
+        "g",
+        "m",
+        "k"
+      ],
+      "image": "https://cdn.dribbble.com/users/1454294/screenshots/16779585/media/0ccc1d4624ec379679ec5fca07699dae.gif"
+    },
+    {
+      "question": "Complete the word \"Ha_\"?",
+      "correctAnswer": "t",
+      "options": [
+        "d",
+        "t",
+        "r"
+      ],
+      "image": "https://clipartix.com/wp-content/uploads/2019/02/cowboy-hat-transparent-2019-57.gif"
+    },
+    {
+      "question": "Complete the word \"Sta_\"?",
+      "correctAnswer": "r",
+      "options": [
+        "k",
+        "p",
+        "r"
+      ],
+      "image": "https://i.pinimg.com/originals/0e/75/cc/0e75cc049032ce2cc9bd7d5807e9d8c4.gif"
+    },
+    {
+      "question": "(The Man .... sleeping yesterday )",
+      "correctAnswer": "was",
+      "options": [
+        "was",
+        "were",
+        "is"
+      ],
+      "image": "https://i.pinimg.com/originals/41/62/36/41623630b99ba8c8e0c85b310cb75554.gif"
+    },
+    {
+      "question": "The People .... watching a movie last night?",
+      "correctAnswer": "were",
+      "options": [
+        "were",
+        "are",
+        "was"
+      ],
+      "image": "https://bestgifs.makeagif.com/wp-content/uploads/2016/06/movie.gif"
+    },
+    {
+      "question": "What is the English word for \"مدرسه\"?",
+      "correctAnswer": "School",
+      "options": [
+        "House",
+        "School",
+        "Hospital"
+      ],
+      "image": "https://iselc.nz/wp-content/uploads/2014/12/school-building-300x274.gif"
+    },
+    {
+      "question": "What is the English word for \"سياره\"?",
+      "correctAnswer": "Car",
+      "options": [
+        "Car",
+        "Bus",
+        "Train"
+      ],
+      "image": "https://i.makeagif.com/media/11-06-2018/0mfBag.gif"
+    },
+    {
+      "question": "How do you spell number 4 ?",
+      "correctAnswer": "four",
+      "options": [
+        "fore",
+        "four",
+        "for"
+      ],
+      "image": "https://i.pinimg.com/originals/bf/9b/1a/bf9b1ad61a5361c4997aaf844b783bf7.gif"
+    },
+    {
+      "question": "How do you spell number 3 ?",
+      "correctAnswer": "Three",
+      "options": [
+        "Three",
+        "There",
+        "Thrie"
+      ],
+      "image": "https://i.pinimg.com/originals/fa/26/26/fa2626fff067aea5b0d1d5ba3b73ae87.gif"
+    },
+    {
+      "question": "How do you spell number 5 ?",
+      "correctAnswer": "Five",
+      "options": [
+        "Fyfe",
+        "Fife",
+        "Five"
+      ],
+      "image": "https://i.pinimg.com/originals/16/a9/39/16a9390449618373c8a48b96e9477875.gif"
+    },
+    {
+      "question": "Fill the missing letter (..ook)",
+      "correctAnswer": "B",
+      "options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "image": "https://i.pinimg.com/originals/b4/3d/43/b43d438638e2ed51d1f19dad2a4eb24d.gif"
+    },
+    {
+      "question": "What is the English word for \"نظارة\"?",
+      "correctAnswer": "Glasses",
+      "options": [
+        "glass",
+        "sun",
+        "Glasses"
+      ],
+      "image": "https://www.icegif.com/wp-content/uploads/2022/12/icegif-473.gif"
+    },
+    {
+      "question": "What is the English word for \"سلة\"?",
+      "correctAnswer": "Basket",
+      "options": [
+        "Basket",
+        "ball",
+        "bag"
+      ],
+      "image": "https://media.baamboozle.com/uploads/images/99272/1616087392_56448_gif-url.gif"
+    },
+    {
+      "question": "What is the English word for \"بطة\"?",
+      "correctAnswer": "Duck",
+      "options": [
+        "dog",
+        "Duck",
+        "back"
+      ],
+      "image": "https://cdn.dribbble.com/users/4091017/screenshots/14199020/media/37392da70495cb9561dc462c4d137ce2.gif"
+    },
+    {
+      "question": "What is the English word for \"هاتف\"?",
+      "correctAnswer": "Phone",
+      "options": [
+        "shop",
+        "zone",
+        "Phone"
+      ],
+      "image": "https://i.gifer.com/R0I5.gif"
+    },
+    {
+      "question": "What is the English word for \"حذاء \"?",
+      "correctAnswer": "Shoe",
+      "options": [
+        "Shoe",
+        "soap",
+        "swap"
+      ],
+      "image": "https://i.pinimg.com/originals/27/b9/bf/27b9bf7ead19bb83d7d86d3d3de943bd.gif"
+    },
+    {
+      "question": "How do you spell number 10 ?",
+      "correctAnswer": "ten",
+      "options": [
+        "ton",
+        "ten",
+        "teen"
+      ],
+      "image": "https://media3.giphy.com/media/dU5aPRX6zcg8JRnGkd/giphy.gif?cid=6c09b952oml22vn7e7bdbo0dc1ttvgert7x9zvfypn75mk2z&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+    },
+    {
+      "question": "How do you spell number 7 ?",
+      "correctAnswer": "seven",
+      "options": [
+        "savn",
+        "sefen",
+        "seven"
+      ],
+      "image": "https://gifdb.com/images/high/sparkling-number-seven-5d7l51t2o5s0j3td.gif"
+    }
+  ]
+}
