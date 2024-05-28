@@ -73,6 +73,4 @@ class EndCorrectIncorrectAlertDialog extends StatelessWidget {
       }
     }
   }
-
-  
 }
