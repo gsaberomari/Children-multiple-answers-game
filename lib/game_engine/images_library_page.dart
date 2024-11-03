@@ -1,6 +1,7 @@
 import 'dart:convert';
+
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class ImageSelectionScreen extends StatefulWidget {
   final String topic;
@@ -11,10 +12,10 @@ class ImageSelectionScreen extends StatefulWidget {
   final ValueChanged<String> onValueChange;
 
   @override
-  _ImageSelectionScreenState createState() => _ImageSelectionScreenState();
+  ImageSelectionScreenState createState() => ImageSelectionScreenState();
 }
 
-class _ImageSelectionScreenState extends State<ImageSelectionScreen> {
+class ImageSelectionScreenState extends State<ImageSelectionScreen> {
   List<String> imageLinks = [];
 
   @override
@@ -27,25 +28,10 @@ class _ImageSelectionScreenState extends State<ImageSelectionScreen> {
     final String response =
         await rootBundle.loadString('assets/questions.json');
     final data = json.decode(response);
-    List<String> links = [];
-    switch (widget.topic) {
-      case 'English':
-        for (var item in data['English']) {
-          links.add(item['image']);
-        }
+    final List<dynamic> topicData = data[widget.topic];
 
-        break;
-
-      case 'Arabic':
-        for (var item in data['Arabic']) {
-          links.add(item['image']);
-        }
-        break;
-      case 'Math':
-        for (var item in data['Math']) {
-          links.add(item['image']);
-        }
-    }
+    final List<String> links =
+        topicData.map((item) => item['image'] as String).toList();
 
     setState(() {
       imageLinks = links;
@@ -73,15 +59,18 @@ class _ImageSelectionScreenState extends State<ImageSelectionScreen> {
                   return GestureDetector(
                     onTap: () {
                       widget.onValueChange(imageLinks[index]);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                            content: Text('Selected: ${imageLinks[index]}')),
-                      );
+                      ScaffoldMessenger.of(context)
+                        ..hideCurrentSnackBar()
+                        ..showSnackBar(
+                          SnackBar(
+                            content: Text('Selected: ${imageLinks[index]}'),
+                          ),
+                        );
                       Navigator.pop(context);
                     },
-                    child: widget.topic != 'Math'
-                        ? Image.network(imageLinks[index])
-                        : Image.asset(imageLinks[index]),
+                    child: widget.topic == 'Math'
+                        ? Image.asset(imageLinks[index])
+                        : Image.network(imageLinks[index]),
                   );
                 },
               ),

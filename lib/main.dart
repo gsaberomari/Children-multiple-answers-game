@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_code/state/quiz_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:provider/provider.dart';
 
 import 'Pages/login.dart';
 import 'Pages/student.dart';
@@ -9,7 +11,12 @@ import 'templates/multiple_answers.dart';
 import 'templates/math_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => QuizState(), // Provide QuizState
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,11 +25,14 @@ class MyApp extends StatelessWidget {
   // Define a function to generate routes for subjects
   Widget generateSubjectRoute(
       String topic, String backgroundImage, String title) {
-    return QuestionsTemplate(
-      backgroundImage: backgroundImage,
-      title: title,
-      topic: topic,
-      sourecFile: false,
+    return ChangeNotifierProvider(
+      create: (context) => QuizState(), // Provide QuizState for each subject
+      child: QuestionsTemplate(
+        backgroundImage: backgroundImage,
+        title: title,
+        topic: topic,
+        sourecFile: false,
+      ),
     );
   }
 
@@ -52,7 +62,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${MediaQuery.of(context).size.width}'),
+        title: const Text('Dominto'),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -124,15 +134,19 @@ class HomePage extends StatelessWidget {
                     fixedSize: const Size(200, 200),
                     backgroundColor: const Color.fromARGB(255, 144, 170, 209)),
                 onPressed: () async {
-                  SharedPreferences teacher =
-                      await SharedPreferences.getInstance();
-                  final isLoggedIn = teacher.getBool('name1') ?? false;
+                  // Get SharedPreferences instance
+                  final prefs = await SharedPreferences.getInstance();
 
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => isLoggedIn
-                        ? const TeacherScreen()
-                        : LoginPage(), // Navigate based on login status
-                  ));
+                  // Check if the user is logged in (e.g., using a key like 'isLoggedIn')
+                  final isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+
+                  // Use Navigator.pushReplacement to avoid back button issue
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            isLoggedIn ? const TeacherScreen() : LoginPage()),
+                  );
                 },
                 child: const Column(
                   mainAxisSize: MainAxisSize.min,
@@ -159,10 +173,12 @@ class HomePage extends StatelessWidget {
                   shadowColor: const Color.fromARGB(255, 118, 161, 89),
                 ),
                 onPressed: () {
-                  // Navigate to the Student Screen using Navigator.of(context).push
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const StudentScreen(),
-                  ));
+                  // Use Navigator.pushReplacement to avoid back button issue
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const StudentScreen(),
+                      ));
                 },
                 child: const Column(
                   mainAxisSize: MainAxisSize.min,
