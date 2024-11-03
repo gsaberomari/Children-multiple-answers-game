@@ -10,7 +10,7 @@ import 'images_library_page.dart';
 import '../manage_questions/files_manager.dart';
 
 class GameEngine extends StatefulWidget {
-  GameEngine({super.key, required this.topic});
+  const GameEngine({super.key, required this.topic});
   final String topic;
 
   @override
@@ -32,11 +32,11 @@ String _imageLink='';
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('Create a question'),
+          title: const Text('Create a question'),
           leading: BackButton(
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => TeacherScreen()),
+                MaterialPageRoute(builder: (context) => const TeacherScreen()),
               );
             },
           )),
@@ -70,8 +70,8 @@ String _imageLink='';
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 shape: const BeveledRectangleBorder(),
-                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-                textStyle: TextStyle(fontSize: 20),
+                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+                textStyle: const TextStyle(fontSize: 20),
               ),
               onPressed: () { showModalBottomSheet(
                   context: context,
@@ -79,48 +79,48 @@ String _imageLink='';
                 );
                 // Add your onPressed logic here
               },
-              child: Text('Device'),
+              child: const Text('Device'),
             ),
-            SizedBox(width: 16), // Adds spacing between the buttons
+            const SizedBox(width: 16), // Adds spacing between the buttons
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                shape: BeveledRectangleBorder(),
-                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-                textStyle: TextStyle(fontSize: 20),
+                shape: const BeveledRectangleBorder(),
+                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+                textStyle: const TextStyle(fontSize: 20),
               ),
               onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ImageSelectionScreen(topic: widget.topic,onValueChange: imageFromLibrary)));
               },
-              child: Text('App Images'),
+              child: const Text('App Images'),
             ),
           ],),
                     
                     const SizedBox(height: 30),
                     TextField(
                       keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: "Question",
                       ),
                       onChanged: (value) => question = value,
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     buildOptionTextField(
                         "Option 1", (value) => option1 = value),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     buildOptionTextField(
                         "Option 2", (value) => option2 = value),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     buildOptionTextField(
                         "Option 3", (value) => option3 = value),
-                    SizedBox(height: 20),
-                    Text(
+                    const SizedBox(height: 20),
+                    const Text(
                       '- Choose the correct answer of the question:',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                     (option1.isEmpty || option2.isEmpty || option3.isEmpty)
-                        ? Text('Fill all of the options first !',
+                        ? const Text('Fill all of the options first !',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 163, 22, 22)))
                         : DropdownButton<String>(
@@ -138,7 +138,7 @@ String _imageLink='';
                               );
                             }).toList(),
                           ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 100),
                       child: Row(
@@ -151,14 +151,14 @@ String _imageLink='';
                                 isLoading = true;
                                 saveQuestion(true);
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
+                                  const SnackBar(
                                       content: Text(
                                           'Question submitted successfully!')),
                                 );
                                 setState(() {});
                               }
                             },
-                            child: Text('Save'),
+                            child: const Text('Save'),
                           ),
                           ElevatedButton(
                             onPressed: () {
@@ -166,13 +166,13 @@ String _imageLink='';
                                 isLoading = true;
                                 saveQuestion(false);
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
+                                  const SnackBar(
                                       content: Text('Add another question')),
                                 );
                                 setState(() {});
                               }
                             },
-                            child: Text('Add more'),
+                            child: const Text('Add more'),
                           ),
                         ],
                       ),
@@ -204,7 +204,7 @@ String _imageLink='';
     if (_imageFile != null) {
       imageProvider = FileImage(File(_imageFile!.path));
     } else if (_imageLink.isNotEmpty) {
-      imageProvider =_imageLink.startsWith('assets/')?AssetImage(_imageLink): NetworkImage(_imageLink) as ImageProvider<Object>;;
+      imageProvider =_imageLink.startsWith('assets/')?AssetImage(_imageLink): NetworkImage(_imageLink) as ImageProvider<Object>;
     } 
    
       
@@ -214,7 +214,7 @@ String _imageLink='';
 
     
     else {
-      imageProvider = NetworkImage('https://addlogo.imageonline.co/image.jpg');
+      imageProvider = const NetworkImage('https://addlogo.imageonline.co/image.jpg');
     }
     return Center(
       child: 
@@ -232,24 +232,24 @@ String _imageLink='';
     return Container(
       height: 100,
       width: MediaQuery.of(context).size.width,
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Column(
         children: <Widget>[
-          Text('Choose the image', style: TextStyle(fontSize: 20)),
-          SizedBox(height: 20),
+          const Text('Choose the image', style: TextStyle(fontSize: 20)),
+          const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextButton.icon(
-                icon: Icon(Icons.camera),
-                label: Text("Camera"),
+                icon: const Icon(Icons.camera),
+                label: const Text("Camera"),
                 onPressed: () {
                   takePhoto(ImageSource.camera);
                 },
               ),
               TextButton.icon(
-                icon: Icon(Icons.image),
-                label: Text("Gallery"),
+                icon: const Icon(Icons.image),
+                label: const Text("Gallery"),
                 onPressed: () {
                   takePhoto(ImageSource.gallery);
                 },
@@ -283,7 +283,7 @@ String _imageLink='';
     return TextField(
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(),
           labelText: labelText,
         ),
         onChanged: onchanged);
@@ -292,25 +292,25 @@ String _imageLink='';
   bool validateInput() {
     if (question.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please enter the question')),
+        const SnackBar(content: Text('Please enter the question')),
       );
       return false;
     }
     if (option1.isEmpty || option2.isEmpty || option3.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please enter all options')),
+        const SnackBar(content: Text('Please enter all options')),
       );
       return false;
     }
     if (correctAnswer.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please choose the correct answer')),
+        const SnackBar(content: Text('Please choose the correct answer')),
       );
       return false;
     }
      if (_imageLink.isEmpty && _imageFile==null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please choose an image')),
+        const SnackBar(content: Text('Please choose an image')),
       );
       return false;
     }
@@ -351,10 +351,11 @@ String imagePath;
     // Save updated questions to file
 
     await questionFile.writeAsString(json.encode(questions));
-    if (done)
+    if (done) {
       Navigator.pop(context);
-    else
+    } else {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => GameEngine(topic: widget.topic)));
+    }
   }
 }

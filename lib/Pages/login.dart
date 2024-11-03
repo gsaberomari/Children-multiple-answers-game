@@ -11,6 +11,8 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +20,7 @@ class LoginPage extends StatelessWidget {
         elevation: 0.0,
         toolbarHeight:100 ,
         centerTitle: true,
-        title: Text('Login',style:TextStyle(fontSize: 40.0,color: Colors.white,fontWeight:FontWeight.bold,letterSpacing:5.0  )),
+        title: const Text('Login',style:TextStyle(fontSize: 40.0,color: Colors.white,fontWeight:FontWeight.bold,letterSpacing:5.0  )),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20.0,10.0,20.0,0.0),
@@ -30,7 +32,7 @@ class LoginPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: TextFormField(
                   controller: _emailController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Email',
                   ),
                   validator: (value) {
@@ -52,7 +54,7 @@ class LoginPage extends StatelessWidget {
                 child: TextFormField(
                   controller: _passwordController,
                   obscureText: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Password',
                   ),
                   validator: (value) {
@@ -68,16 +70,16 @@ class LoginPage extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 96, 155, 243)),
+                    backgroundColor: const Color.fromARGB(255, 96, 155, 243)),
                 onPressed: ()async {
                   // Validate email and password
                   if (_emailController.text.isEmpty ||
                       _passwordController.text.isEmpty) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
+                      const SnackBar(
                         content: Text('Please enter both email and password'),
                       ),
                     );
@@ -91,9 +93,9 @@ class LoginPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) =>const TeacherScreen()),
                   );
                 },
-                child: Text('Login'),
+                child: const Text('Login'),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -101,7 +103,7 @@ class LoginPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => CreateAccountPage()),
                   );
                 },
-                child: Text('Create Account'),
+                child: const Text('Create Account'),
               ),
             ],
           ),
@@ -117,11 +119,13 @@ class CreateAccountPage extends StatelessWidget {
   final TextEditingController _confirmPasswordController =
       TextEditingController();
 
+  CreateAccountPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Create Account'),
+        title: const Text('Create Account'),
       ),
       body: Center(
         child: Column(
@@ -131,7 +135,7 @@ class CreateAccountPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: TextFormField(
                 controller: _emailController,
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: const InputDecoration(labelText: 'Email'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email';
@@ -151,7 +155,7 @@ class CreateAccountPage extends StatelessWidget {
               child: TextFormField(
                 controller: _passwordController,
                 obscureText: true,
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: const InputDecoration(labelText: 'Password'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your password';
@@ -170,7 +174,7 @@ class CreateAccountPage extends StatelessWidget {
               child: TextFormField(
                 controller: _confirmPasswordController,
                 obscureText: true,
-                decoration: InputDecoration(labelText: 'Confirm Password'),
+                decoration: const InputDecoration(labelText: 'Confirm Password'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please confirm your password';
@@ -182,7 +186,7 @@ class CreateAccountPage extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Validate form
@@ -190,7 +194,7 @@ class CreateAccountPage extends StatelessWidget {
                     _passwordController.text.isEmpty ||
                     _confirmPasswordController.text.isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
+                    const SnackBar(
                       content: Text('Please fill in all fields'),
                     ),
                   );
@@ -200,7 +204,7 @@ class CreateAccountPage extends StatelessWidget {
                 // For simplicity, we'll just navigate back to the login page
                 Navigator.pop(context);
               },
-              child: Text('Create Account'),
+              child: const Text('Create Account'),
             ),
           ],
         ),

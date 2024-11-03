@@ -9,14 +9,14 @@ import 'templates/multiple_answers.dart';
 
 @override
 class QuizesPage extends StatelessWidget {
-  QuizesPage({required this.testPage});
+  const QuizesPage({super.key, required this.testPage});
   final String testPage;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quizes Page'),
+        title: const Text('Quizes Page'),
       ),
       body: Center(
         child: Column(
@@ -24,12 +24,12 @@ class QuizesPage extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
-                fixedSize: Size(200, 200),
+                fixedSize: const Size(200, 200),
                 backgroundColor: Colors.amber,
-                shadowColor: Color.fromARGB(255, 118, 161, 89),
+                shadowColor: const Color.fromARGB(255, 118, 161, 89),
               ),
               onPressed: () {
                 Navigator.of(context).pushNamed(testPage);
@@ -51,12 +51,12 @@ class QuizesPage extends StatelessWidget {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
-                fixedSize: Size(200, 200),
+                fixedSize: const Size(200, 200),
                 backgroundColor: Colors.redAccent,
-                shadowColor: Color.fromARGB(255, 118, 161, 89),
+                shadowColor: const Color.fromARGB(255, 118, 161, 89),
               ),
               onPressed: () async {
                 String fileName =
@@ -71,7 +71,7 @@ class QuizesPage extends StatelessWidget {
                   switch (testPage) {
                     case 'english':
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => QuestionsTemplate(
+                          builder: (context) => const QuestionsTemplate(
               sourecFile: true,
               backgroundImage:
                   'https://i.pinimg.com/564x/56/a6/81/56a68117e221e1e018aca73bfe4160ba.jpg',
@@ -81,7 +81,7 @@ class QuizesPage extends StatelessWidget {
                       break;
                     case 'arabic':
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => QuestionsTemplate(
+                          builder: (context) => const QuestionsTemplate(
               sourecFile: true,
               backgroundImage:
                   'https://i.pinimg.com/564x/fa/d2/5d/fad25d9aee26e276f1932cac5747e0dc.jpg',
@@ -91,7 +91,7 @@ class QuizesPage extends StatelessWidget {
                       break;
                     case 'math':
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => MathematicsPage(sourecFile: true,)));
+                          builder: (context) => const MathematicsPage(sourecFile: true,)));
                       break;
                     default:
                   }
@@ -121,7 +121,7 @@ class QuizesPage extends StatelessWidget {
                   SnackBar(content: Text(message)),
                 );
               },
-              child: Text('Delete the file'),
+              child: const Text('Delete the file'),
             )
           ],
         ),

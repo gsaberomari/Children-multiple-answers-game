@@ -6,20 +6,22 @@ import '../quiz_page.dart';
 
 
 class StudentScreen extends StatelessWidget {
+  const StudentScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dominto'),
+        title: const Text('Dominto'),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage(
                   "assets/background/bears.gif")),
         ),
-        child: Center(
+        child: const Center(
           child: Column(
             children: <Widget>[
               Padding(
@@ -67,7 +69,7 @@ class StudentScreen extends StatelessWidget {
 }
 
 class HomeButton extends StatelessWidget {
-  HomeButton(
+  const HomeButton(
       {super.key,
       required this.edge,
       required this.buttonColor,
@@ -87,7 +89,7 @@ class HomeButton extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(edge[0], edge[1], edge[2], edge[3]),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            fixedSize: Size(160, 80),
+            fixedSize: const Size(160, 80),
             backgroundColor: Color.fromARGB(buttonColor[0], buttonColor[1],
                     buttonColor[2], buttonColor[3])
                 .withOpacity(0.5)),

@@ -13,10 +13,10 @@ class TeacherScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Teacher Page'),
+        title: const Text('Teacher Page'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(.0),
+      body: const Padding(
+        padding: EdgeInsets.all(.0),
         child: Center(
           child: Column(
             children: [
@@ -60,7 +60,7 @@ class TeacherScreen extends StatelessWidget {
 }
 
 class HomeButton extends StatelessWidget {
-  HomeButton(
+  const HomeButton(
       {super.key,
       required this.edge,
       required this.buttonColor,
@@ -80,7 +80,7 @@ class HomeButton extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(edge[0], edge[1], edge[2], edge[3]),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            fixedSize: Size(160, 80),
+            fixedSize: const Size(160, 80),
             backgroundColor: Color.fromARGB(buttonColor[0], buttonColor[1],
                     buttonColor[2], buttonColor[3])
                 .withOpacity(0.5)),

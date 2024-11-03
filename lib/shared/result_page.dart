@@ -6,7 +6,7 @@ class ResultsPage extends StatelessWidget {
   final int totalQuestions;
   final ConfettiController _confettiController = ConfettiController(duration: const Duration(seconds: 3));
 
-  ResultsPage({required this.score, required this.totalQuestions}) {
+  ResultsPage({super.key, required this.score, required this.totalQuestions}) {
     _confettiController.play();
   }
 
@@ -31,27 +31,27 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Your Score:',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     '$score / $totalQuestions',
-                    style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.blue),
+                    style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.blue),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     feedbackText,
-                    style: TextStyle(fontSize: 24, color: Colors.green),
+                    style: const TextStyle(fontSize: 24, color: Colors.green),
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   ElevatedButton(
                     onPressed: () {
                       _confettiController.stop();
                       Navigator.pop(context);
                     },
-                    child: Text('Back to Home'),
+                    child: const Text('Back to Home'),
                   ),
                 ],
               ),
@@ -63,7 +63,7 @@ class ResultsPage extends StatelessWidget {
               confettiController: _confettiController,
               blastDirectionality: BlastDirectionality.explosive,
               shouldLoop: false,
-              colors: [Colors.green, Colors.blue, Colors.pink, Colors.orange, Colors.purple],
+              colors: const [Colors.green, Colors.blue, Colors.pink, Colors.orange, Colors.purple],
             ),
           ),
         ],

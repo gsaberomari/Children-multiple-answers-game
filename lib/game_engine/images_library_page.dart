@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -8,6 +7,7 @@ class ImageSelectionScreen extends StatefulWidget {
 
   const ImageSelectionScreen(
       {super.key, required this.topic, required this.onValueChange});
+
   final ValueChanged<String> onValueChange;
 
   @override
@@ -41,11 +41,10 @@ class _ImageSelectionScreenState extends State<ImageSelectionScreen> {
           links.add(item['image']);
         }
         break;
-         case 'Math':
-      for (var item in data['Math']) {
-       
+      case 'Math':
+        for (var item in data['Math']) {
           links.add(item['image']);
-      }
+        }
     }
 
     setState(() {
@@ -57,14 +56,14 @@ class _ImageSelectionScreenState extends State<ImageSelectionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Select an Image'),
+        title: const Text('Select an Image'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: imageLinks.isEmpty
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 8.0,
                   mainAxisSpacing: 8.0,
@@ -80,12 +79,13 @@ class _ImageSelectionScreenState extends State<ImageSelectionScreen> {
                       );
                       Navigator.pop(context);
                     },
-                    child:widget.topic!='Math'? Image.network(imageLinks[index]):Image.asset(imageLinks[index]),
+                    child: widget.topic != 'Math'
+                        ? Image.network(imageLinks[index])
+                        : Image.asset(imageLinks[index]),
                   );
                 },
               ),
       ),
     );
   }
-
 }

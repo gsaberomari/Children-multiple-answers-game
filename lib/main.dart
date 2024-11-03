@@ -8,12 +8,24 @@ import 'templates/multiple_answers.dart';
 
 import 'templates/math_page.dart';
 
-
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // Define a function to generate routes for subjects
+  Widget generateSubjectRoute(
+      String topic, String backgroundImage, String title) {
+    return QuestionsTemplate(
+      backgroundImage: backgroundImage,
+      title: title,
+      topic: topic,
+      sourecFile: false,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,25 +33,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      
       routes: {
-        'english': (context) =>const QuestionsTemplate(
-              sourecFile: false,
-              backgroundImage:
-                  'assets/background/english.jpg',
-              title: 'English',
-              topic: 'English',
-            ),
-        'arabic': (context) =>const QuestionsTemplate(
-              sourecFile: false,
-              backgroundImage:
-                  'assets/background/arabic.jpg',
-              title: 'عربي',
-              topic: 'Arabic',
-            ),
-        'math': (context) => MathematicsPage(sourecFile: false,)
+        "english": (context) => generateSubjectRoute(
+            "English", "assets/background/english.jpg", "English"),
+        'math': (context) => const MathematicsPage(sourecFile: false),
+        'arabic': (context) => generateSubjectRoute(
+            'Arabic', 'assets/background/arabic.jpg', 'عربي'),
       },
-      home:HomePage()  //Garbage()//TeacherScreen() //HomePage()
+      home: const HomePage(),
     );
   }
 }
@@ -54,106 +55,63 @@ class HomePage extends StatelessWidget {
         title: Text('${MediaQuery.of(context).size.width}'),
       ),
       body: Container(
-        decoration:const BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage(
-                  'assets/background/home.jpg')),
+              image: AssetImage('assets/background/home.jpg')),
         ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Padding(
-                padding:const EdgeInsets.only(left: 8, right: 8, top: 20),
-                child: Row(
+                padding: EdgeInsets.only(
+                    top: 20,
+                    left: MediaQuery.of(context).size.width * 0.05,
+                    right: MediaQuery.of(context).size.width *
+                        0.05), // Combined padding
+                child: Column(
+                  // Wrap with a Column for vertical arrangement
                   children: [
-                  const  SizedBox(
-                      width: 30,
-                    ),
-                    Column(
+                    Row(
                       children: [
-                        Row(
-                          children: [
-                            //------------------
-                          const  SizedBox(
-                              width: 72,
-                            ),
-                            //--------------------
-                          const  Text('D',
-                                style: TextStyle(
-                                    fontSize: 50,
-                                    color: Color.fromARGB(255, 77, 126, 218))),
-                            //------------------
-                           const SizedBox(
-                              width: 0,
-                            ),
-                            //--------------------
-                          const  Text('o',
-                                style: TextStyle(
-                                    fontSize: 50,
-                                    color: Color.fromARGB(230, 196, 22, 22))),
-                            //--------------------
-                           const SizedBox(
-                              width: 0,
-                            ),
-                            //----------------------
-                         const   Text('m',
-                                style: TextStyle(
-                                    fontSize: 50,
-                                    color: Color.fromARGB(255, 238, 235, 56))),
-                            //-----------------------------
-                          const  SizedBox(
-                              width: 0,
-                            ),
-                            //-----------------------------
-                         const   Text('i',
-                                style: TextStyle(
-                                    fontSize: 50,
-                                    color: Color.fromARGB(255, 238, 113, 10))),
-                            //-----------------------------
-                           const SizedBox(
-                              width: 0,
-                            ),
-                            //-----------------------------
-                         const   Text('n',
-                                style: TextStyle(
-                                    fontSize: 50,
-                                    color: Color.fromARGB(232, 26, 172, 39))),
-                            //-----------------------------
-                         const   SizedBox(
-                              width: 0,
-                            ),
-                            //-----------------------------
-                         const   Text('t',
-                                style: TextStyle(
-                                    fontSize: 50,
-                                    color: Color.fromARGB(255, 116, 21, 116))),
-                            //-----------------------------
-                        const    SizedBox(
-                              width: 0,
-                            ),
-                            //-----------------------------
-                       const     Text('o',
-                                style: TextStyle(
-                                    fontSize: 50,
-                                    color: Color.fromARGB(255, 199, 22, 9))),
-                            //-----------------------------
-                        const    SizedBox(
-                              width: 0,
-                            ),
-                            //-----------------------------
-                            SizedBox(
-                                height: 60,
-                                width: 60,
-                                child: Image.asset(
-                                  'assets/background/pencil.webp',
-                                  fit: BoxFit.fill,
-                                ))
-                          ],
+                        const SizedBox(width: 72), // Adjust spacing as needed
+                        const Text('D',
+                            style: TextStyle(
+                                fontSize: 50,
+                                color: Color.fromARGB(255, 77, 126, 218))),
+                        const Text('o',
+                            style: TextStyle(
+                                fontSize: 50,
+                                color: Color.fromARGB(230, 196, 22, 22))),
+                        const Text('m',
+                            style: TextStyle(
+                                fontSize: 50,
+                                color: Color.fromARGB(255, 238, 235, 56))),
+                        const Text('i',
+                            style: TextStyle(
+                                fontSize: 50,
+                                color: Color.fromARGB(255, 238, 113, 10))),
+                        const Text('n',
+                            style: TextStyle(
+                                fontSize: 50,
+                                color: Color.fromARGB(232, 26, 172, 39))),
+                        const Text('t',
+                            style: TextStyle(
+                                fontSize: 50,
+                                color: Color.fromARGB(255, 116, 21, 116))),
+                        const Text('o',
+                            style: TextStyle(
+                                fontSize: 50,
+                                color: Color.fromARGB(255, 199, 22, 9))),
+                        SizedBox(
+                          height: 60,
+                          width: 60,
+                          child: Image.asset('assets/background/pencil.webp',
+                              fit: BoxFit.fill),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -161,20 +119,20 @@ class HomePage extends StatelessWidget {
               //----------------------------------
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    padding:const EdgeInsets.all(10),
-                    shape:const CircleBorder(),
-                    fixedSize:const Size(200, 200),
-                    backgroundColor:const Color.fromARGB(255, 144, 170, 209)),
-                onPressed: () async{
-                    SharedPreferences teacher = await SharedPreferences.getInstance();
-          bool? isLoggedIn  =teacher.getBool('name1');
-          isLoggedIn==null || !isLoggedIn ?
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) =>  LoginPage())):
-                  
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const TeacherScreen()),
-                  );
+                    padding: const EdgeInsets.all(10),
+                    shape: const CircleBorder(),
+                    fixedSize: const Size(200, 200),
+                    backgroundColor: const Color.fromARGB(255, 144, 170, 209)),
+                onPressed: () async {
+                  SharedPreferences teacher =
+                      await SharedPreferences.getInstance();
+                  final isLoggedIn = teacher.getBool('name1') ?? false;
+
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => isLoggedIn
+                        ? const TeacherScreen()
+                        : LoginPage(), // Navigate based on login status
+                  ));
                 },
                 child: const Column(
                   mainAxisSize: MainAxisSize.min,
@@ -194,16 +152,17 @@ class HomePage extends StatelessWidget {
 
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding:const EdgeInsets.all(10),
-                  shape:const CircleBorder(),
-                  fixedSize:const Size(200, 200),
-                  backgroundColor:const Color.fromARGB(255, 150, 199, 117),
-                  shadowColor:const Color.fromARGB(255, 118, 161, 89),
+                  padding: const EdgeInsets.all(10),
+                  shape: const CircleBorder(),
+                  fixedSize: const Size(200, 200),
+                  backgroundColor: const Color.fromARGB(255, 150, 199, 117),
+                  shadowColor: const Color.fromARGB(255, 118, 161, 89),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => StudentScreen()),
-                  );
+                  // Navigate to the Student Screen using Navigator.of(context).push
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const StudentScreen(),
+                  ));
                 },
                 child: const Column(
                   mainAxisSize: MainAxisSize.min,
@@ -220,7 +179,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-           const   SizedBox(
+              const SizedBox(
                 height: 40,
               )
             ],

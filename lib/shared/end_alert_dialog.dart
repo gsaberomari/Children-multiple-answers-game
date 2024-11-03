@@ -2,7 +2,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class EndCorrectIncorrectAlertDialog extends StatelessWidget {
-  EndCorrectIncorrectAlertDialog(
+  const EndCorrectIncorrectAlertDialog(
       {super.key,
       required this.isEnd,
       this.isCorrect,
